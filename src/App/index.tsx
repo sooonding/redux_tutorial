@@ -1,7 +1,9 @@
 import React, { ChangeEvent, FormEvent, useEffect, useRef, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+// import { createTodoActionCreator, deleteTodoActionCreator, editTodoActionCreator, selectTodoActionCreator, toggleTodoActionCreator } from '../redux-og';
+
+import { createTodoActionCreator, editTodoActionCreator, removeTodoActionCreator, selectTodoActionCreator, toggleTodoActionCreator } from '../redux-toolkit';
 import { v1 as uuid } from 'uuid';
-import { createTodoActionCreator, deleteTodoActionCreator, editTodoActionCreator, selectTodoActionCreator, toggleTodoActionCreator } from '../redux-og';
 import { State } from '../type';
 import './App.css';
 
@@ -81,7 +83,7 @@ const App = function() {
 
   const handleDelete = (): void => {
     if (!selectedTodoId) return;
-    dispatch(deleteTodoActionCreator({ id: selectedTodoId }));
+    dispatch(removeTodoActionCreator({ id: selectedTodoId }));
   };
 
   return (
