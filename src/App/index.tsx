@@ -2,7 +2,7 @@ import React, { ChangeEvent, FormEvent, useEffect, useRef, useState } from 'reac
 import { useDispatch, useSelector } from 'react-redux';
 import { v1 as uuid } from 'uuid';
 import { createTodoActionCreator, deleteTodoActionCreator, editTodoActionCreator, selectTodoActionCreator, toggleTodoActionCreator } from '../redux-og';
-import { Todo, State } from '../type';
+import { State } from '../type';
 import './App.css';
 
 const App = function() {
